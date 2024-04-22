@@ -1,10 +1,41 @@
 const Sequelize = require("sequelize");
 const db = new Sequelize("ums", "root", "", {
-  host: "localhost",
+  host: "120.0.0.1",
   dialect: "mysql",
 }); //Crear una instancia de Sequelize para poder conectarnos a la base de datos
 
-module.exports = db; //Exportar la instancia de Sequelize para poder utilizarla en otros archivos
+module.exports = db;
+// module.exports = db.define("User",
+// {
+//   id:{
+//     type:Sequelize.INTEGER(11),
+//     allowNull:false,
+//     primaryKey:true,
+//     autoincrement:true
+//   },
+//   name:{
+//     type:Sequelize.STRING,
+//     allowNull:false,
+//     unique:true
+//   },
+//   email:{
+//     type:Sequelize.STRING,
+//     allowNull:false,
+//     unique:true
+//   },
+//   phone:{
+//     type:Sequelize.STRING,
+//     allowNull:false,
+//     unique:true
+//   }
+
+// }
+
+// )
+
+//run command in cli: $sequelize migration:gernerate --name create_users_table
+
+ //Exportar la instancia de Sequelize para poder utilizarla en otros archivos
 
 // ¿Que es sequelize?
 // Sequelize es un ORM (Object-Relational Mapping) que nos permite interactuar

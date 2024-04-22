@@ -11,9 +11,9 @@ app.engine("hbs", exphbs.engine({ extname: ".hbs" }));
 app.set("view engine", "hbs");
 app.use("/", routes); //Definir la ruta base de la aplicacion
 
-app.get("/", (req, res) => {
-  res.render("home");
-});
+// app.get("/", (req, res) => {
+//   res.render("home");
+// });
 
 app.listen(port, () => {
   console.log(`Servidor en linea en puerto: ${port}`);
